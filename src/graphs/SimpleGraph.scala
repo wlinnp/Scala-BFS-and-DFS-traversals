@@ -4,7 +4,7 @@ import scala.collection.mutable.ListBuffer
 /**
   * @author Wai Phyo
   */
-class SimpleGraph(val nodes:Int) {
+abstract class SimpleGraph(val nodes:Int) {
   if (nodes < 1) {
     throw new IllegalArgumentException("number of nodes mut be at least 1")
   }
@@ -44,4 +44,6 @@ class SimpleGraph(val nodes:Int) {
     }
     result.toString()
   }
+
+  def traverse(start: Int): String
 }

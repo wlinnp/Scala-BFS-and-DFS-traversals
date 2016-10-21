@@ -6,7 +6,7 @@ import scala.collection.mutable.ListBuffer
   * @author Wai Phyo
   */
 class BfsGraph(override val nodes:Int) extends SimpleGraph (nodes) {
-  def bfs(start: Int): String = {
+  private def bfs(start: Int): String = {
     if (!inRange(start)) {
       throw new IllegalArgumentException("Invalid Start position.")
     }
@@ -30,5 +30,9 @@ class BfsGraph(override val nodes:Int) extends SimpleGraph (nodes) {
       graphQueue.remove(0)
     }
     result.toString()
+  }
+
+  override def traverse(start: Int): String = {
+    bfs(start)
   }
 }
