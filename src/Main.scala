@@ -7,7 +7,8 @@ import scala.io.StdIn
   */
 object Main {
   def main(args: Array[String]): Unit = {
-
+    println("Test Runs")
+    testBfsDfs()
     println("BFS Trasversal & DFS Trasversal")
     println("===============================")
     var loopControl: Boolean = true

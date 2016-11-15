@@ -5,9 +5,11 @@ import scala.collection.mutable.ListBuffer
   * @author Wai Phyo
   */
 abstract class SimpleGraph(val nodes:Int) {
+
   if (nodes < 1) {
     throw new IllegalArgumentException("number of nodes mut be at least 1")
   }
+
   val TAB_SEPARATOR: String = "\t==>\t"
   val LINE_SEPARATOR: String = "\n"
   val COMMA_SEPARATOR: String = ", "
